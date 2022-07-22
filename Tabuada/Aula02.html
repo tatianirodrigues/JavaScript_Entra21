@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Script</title>
+        <script>
+            let tabuada = prompt("Digite os valores separados por (;)"); // prompt é o alerta com espaço pra digitar o que for digitado no espaço é o valor da variável
+            
+            tabuada = tabuada.split(";");//  String -> array
+            
+            console.log(tabuada); // formou um array de números 
+
+            tabuada.forEach(element => { 
+                if(element>0 && element<=10 ){
+                    console.log ("*********** Tabuada do " + element + " ***********");
+                    for (let i = 0; i < 10; i++) {
+                    let resultado = element + "*" + i + " = " + element*i;
+                    console.log(resultado)
+                 }
+                } 
+            }); 
+        </script>
+    </head>
+    <body>
+
+    </body>
+ </html>

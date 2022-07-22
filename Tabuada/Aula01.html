@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Script</title>
+        <script>
+            const nome = "Tatiani";
+            console.log(nome);
+
+            let idade = 26;
+
+            console.log("Olá " + nome + " sua idade é " + idade);
+           
+            let numero1 = prompt("Digite um número");
+            let numero2 = prompt("Digite outro número");
+            
+            if (numero1 < 10 && numero1 > 0 && numero2 < 10 && numero2 > 0) {
+                if (numero1>numero2){
+                    let numeroX;
+                    numeroX =  numero1;
+                    numero1 = numero2;
+                    numero2 = numeroX;
+                }
+                while (numero1 <= numero2){
+                    console.log ("****TABUADA DO " + numero1 + "****");
+                    for (let i=0; i< 10; i++){
+                    let resultado = numero1 * (i + 1) ;
+                    console.log( numero1 + " * " + (i + 1)  + " = " + resultado);
+                    }
+                    numero1 ++;
+                }
+            }
+            else{
+                alert("Dados inválidos!!!!! Digite um número entre 0 e 9!")
+            }
+          
+        </script>
+    </head>
+    <body>
+    </body>
+ </html>
