@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title> Tabuada </title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        function calcular() {
+            // em jacaScrpit seria const tabuada = document.getElementById("tabuada");
+            // em JQuery:
+            const tabuada = $("#tabuada").val();
+            $("#tabuadaSelecionada").text("Tabuada: " + tabuada); //add valor num div existente
+
+            let result = " ";
+
+            for (let index = 1; index < 11; index++) {
+               // result = "<div>" + tab + "<div>"
+               
+                result += `<div>${tabuada} X ${index} = ${tabuada*index} </div>`; //criando um div
+            }
+
+
+
+            $("#tabuadaResultado").text(" ");
+            $(result).appendTo("#tabuadaResultado");
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <label>
+            Tabuada
+            <input id="tabuada" type="text" placeholder="Digite o número da tabuada">
+        </label>
+        <button onclick="calcular()">Calcular</button>
+    </div>
+    <div id="containerTabuada">
+        <span id="tabuadaSelecionada"></span>
+        <span id="tabuadaResultado"></span>
+
+    </div>
+</body>
+
+</html>
