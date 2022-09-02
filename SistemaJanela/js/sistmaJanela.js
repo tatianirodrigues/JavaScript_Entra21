@@ -13,5 +13,27 @@ function mostrarElemento(elemento){
     $(elemento).show();
 }
 
+function abrirJanela(elemento){
+    if($(elemento).hasClass("tabuada")){
+        $("#janela").find("#title").text("tabuada");
+    }
+    if($(elemento).hasClass("imc")){
+        $("#janela").find("#title").text("imc");
+    }
+    if($(elemento).hasClass("calculadora")){
+        $("#janela").find("#title").text("calculadora");
+    }
+    if($(elemento).hasClass("ajax")){
+        $("#janela").find("#title").text("Exemplo ajax");
+        const form = '<label> CEP: </label>' + 
+                    '<input type="text" id="cep">' + 
+                    '<button id="enviar_cep">Enviar</buttton>';
+        $(form).appendTo("#janela-conteudo");
+
+    }
+    mostrarElemento("#janela");
+}
+
+
 
 
