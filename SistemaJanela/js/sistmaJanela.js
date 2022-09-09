@@ -31,6 +31,18 @@ function abrirJanela(elemento){
         $(form).appendTo("#janela-conteudo");
 
     }
+    if($(elemento).hasClass("ibge")){
+        $("#janela").find("#title").text("Exemplo IBGE");
+
+        const select = '<label>Selecionde um estado: </label>'+ 
+                        '<select id="estado"></select>';
+
+        
+        $(select).appendTo("#janela-conteudo"); 
+
+        getEstados();
+                 
+    }
     mostrarElemento("#janela");
 }
 

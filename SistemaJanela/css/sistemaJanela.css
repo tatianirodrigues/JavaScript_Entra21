@@ -83,6 +83,7 @@ footer{
 #botoes-controle #fechar:hover{
     font-weight: bold;
 }
-input#cep{
+option,
+input{
     color: black;
 }
